@@ -1,0 +1,36 @@
+
+<h1>HOMEPAGE</h1>
+<p>{{title}}</p>
+
+
+<div>
+    <label for="name">ชื่อ-สกุล:</label>
+    <input id="name" [(ngModel)]="fullname" placeholder="ชื่อ-สกุล">
+    <button (click)="btnclick()">ยืนยัน</button>
+    <button (click)="btnclear()">ล้าง</button>
+
+</div>
+<button (click)="btnSwitch()">Show/Hide</button>
+<div *ngIf="_show">
+  <p>ลาก่อน</p>
+</div>
+
+<li *ngFor="let user of UserList">
+  <span>{{user}}</span>
+
+</li>
+
+<div>
+  <label for="N1">ตัวเลขที่ 1 </label>
+    <input id="n1" [(ngModel)]="_number1" placeholder="ตัวเลขที่ 1">
+    <label for="N2">ตัวเลขที่ 2 </label>
+    <input id="n2" [(ngModel)]="_number2" placeholder="ตัวเลขที่ 2">
+    <label for="N3">ตัวเลขที่ 3 </label>
+    <input id="n3" [(ngModel)]="_number3" placeholder="ตัวเลขที่ 3">
+
+</div>
+<button (click)="btnCal()">คำนวณ</button>
+<div *ngIf="_show">
+  <h2>ผลรวมของคุณคือ : {{total}}</h2>
+</div>
+
